@@ -1,5 +1,6 @@
 package de.softdeveloper.threaddemo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -29,6 +30,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnStart.setOnClickListener {
             doIt4()
+        }
+
+        binding.btnNext.setOnClickListener {
+            startActivity(Intent(this,CoroutineActivity::class.java))
         }
 
     }
